@@ -37,7 +37,6 @@ public class ToolWindowPanel extends JPanel {
                 webBrowser.setScene(scene);
                 Double widthDouble = new Integer(WIDTH).doubleValue();
                 Double heightDouble = new Integer(HEIGHT).doubleValue();
-
                 VBox box = new VBox(10);
                 HBox urlBox = new HBox(10);
                 final TextField urlTextField = new TextField();
@@ -45,7 +44,6 @@ public class ToolWindowPanel extends JPanel {
                 Button go = new Button("go");
                 urlTextField.setPrefWidth(WIDTH - 70);
                 urlBox.getChildren().addAll(urlTextField, go);
-
                 WebView view = new WebView();
                 view.setMinSize(widthDouble, heightDouble);
                 view.setPrefSize(widthDouble, heightDouble);
@@ -58,9 +56,6 @@ public class ToolWindowPanel extends JPanel {
                 root.getChildren().add(box);
             }
         });
-
-       /* final JScrollPane scrollPane = new JScrollPane(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setViewportView(webBrowser);*/
         add(webBrowser);
     }
 }
